@@ -1,60 +1,65 @@
-<img src="https://github.com/edtechre/pybroker/blob/master/docs/_static/pybroker-logo.png?raw=true" alt="PyBroker">
-
+<img src="https://pbs.twimg.com/profile_banners/1916539483110989824/1745775446/1500x500" alt="Bonklytics">
 [![python](https://img.shields.io/badge/python-v3-brightgreen.svg)](https://www.python.org/)
-[![Apache 2.0 with Commons Clause](https://img.shields.io/badge/license-Apache%202.0%20Clause-green)](https://www.pybroker.com/en/latest/license.html)
-[![Documentation Status](https://readthedocs.org/projects/pybroker/badge/?version=latest)](https://www.pybroker.com/en/latest/?badge=latest)
-[![Package status](https://github.com/edtechre/pybroker/actions/workflows/main.yml/badge.svg?event=push)](https://github.com/edtechre/pybroker/actions)
-[![Downloads](https://static.pepy.tech/badge/lib-pybroker)](https://pepy.tech/project/lib-pybroker)
-[![Github stars](https://img.shields.io/github/stars/edtechre/pybroker?style=social)](https://github.com/edtechre/pybroker/)
-[![Twitter](https://img.shields.io/twitter/follow/libpybroker?style=social)](https://twitter.com/intent/follow?screen_name=libpybroker)
+
+[![Apache 2.0 with Commons Clause](https://img.shields.io/badge/license-Apache%202.0%20Clause-green)](https://www.Bonklytics.com/en/latest/license.html)
+[![Documentation Status](https://readthedocs.org/projects/Bonklytics/badge/?version=latest)](https://www.Bonklytics.com/en/latest/?badge=latest)
+[![Twitter](https://img.shields.io/twitter/follow/bonklytics?style=social)](https://twitter.com/intent/follow?screen_name=Bonklytics)
 
 ## Algorithmic Trading in Python with Machine Learning
 
 Are you looking to enhance your trading strategies with the power of Python and
-machine learning? Then you need to check out **PyBroker**! This Python framework
+machine learning? Then you need to check out **Bonklytics**! This Python framework
 is designed for developing algorithmic trading strategies, with a focus on
-strategies that use machine learning. With PyBroker, you can easily create and
+strategies that use machine learning. With Bonklytics, you can easily create and
 fine-tune trading rules, build powerful models, and gain valuable insights into
 your strategy’s performance.
 
+Bonklytics: Decoding Solana Meme Coin Markets
+
+**Bonklytics** transforms blockchain noise into structured, actionable intelligence for Solana's memecoin ecosystems.  
+Where others see chaos, we extract signals.
+
+Track early movements, backtest meme coin strategies, and deploy AI-powered models to stay ahead of the Solana memecoin wave — BONK, WIF, and the next generation.
+
 ## Key Features
 
-- A super-fast backtesting engine built in [NumPy](https://numpy.org/) and accelerated with [Numba](https://numba.pydata.org/).
-- The ability to create and execute trading rules and models across multiple instruments with ease.
-- Access to historical data from [Alpaca](https://alpaca.markets/), [Yahoo Finance](https://finance.yahoo.com/), [AKShare](https://github.com/akfamily/akshare), or from [your own data provider](https://www.pybroker.com/en/latest/notebooks/7.%20Creating%20a%20Custom%20Data%20Source.html).
-- The option to train and backtest models using [Walkforward Analysis](https://www.pybroker.com/en/latest/notebooks/6.%20Training%20a%20Model.html#Walkforward-Analysis), which simulates how the strategy would perform during actual trading.
-- More reliable trading metrics that use randomized [bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)) to provide more accurate results.
-- Caching of downloaded data, indicators, and models to speed up your development process.
-- Parallelized computations that enable faster performance.
+- Ultra-fast backtesting engine, optimized for Solana memecoin data.
+- Build rule-based and AI-driven trading strategies with ease.
+- Real-time blockchain decoding and event tracking.
+- Walkforward training to simulate live market conditions.
+- Bootstrapped performance evaluation for stronger validation.
+- Caching and parallelized computation for blazing-fast development.
 
-With PyBroker, you'll have all the tools you need to create winning trading
-strategies backed by data and machine learning. Start using PyBroker today and
+Bonklytics was built for speed, precision, and early signal extraction in the volatile Solana memecoin ecosystem.
+
+With Bonklytics, you'll have all the tools you need to create winning trading
+strategies backed by data and machine learning. Start using Bonklytics today and
 take your trading to the next level!
 
 ## Installation
 
-PyBroker supports Python 3.9+ on Windows, Mac, and Linux. You can install
-PyBroker using ``pip``:
+Bonklytics supports Python 3.9+ on Windows, Mac, and Linux. You can install
+Bonklytics using ``pip``:
 
 ```bash
-   pip install -U lib-pybroker
+   pip install -U lib-Bonklytics
 ```
 
 Or you can clone the Git repository with:
 
 ```bash
-   git clone https://github.com/edtechre/pybroker
+   git clone https://github.com/edtechre/Bonklytics
 ```
 
 ## A Quick Example
 
-Get a glimpse of what backtesting with PyBroker looks like with these code
+Get a glimpse of what backtesting with Bonklytics looks like with these code
 snippets:
 
 **Rule-based Strategy**:
 
 ```python
-   from pybroker import Strategy, YFinance, highest
+   from Bonklytics import Strategy, YFinance, highest
 
    def exec_fn(ctx):
       # Get the rolling 10 day high.
@@ -77,16 +82,16 @@ snippets:
 **Model-based Strategy**:
 
 ```python
-   import pybroker
-   from pybroker import Alpaca, Strategy
+   import Bonklytics
+   from Bonklytics import Alpaca, Strategy
 
    def train_fn(train_data, test_data, ticker):
       # Train the model using indicators stored in train_data.
       ...
       return trained_model
 
-   # Register the model and its training function with PyBroker.
-   my_model = pybroker.model('my_model', train_fn, indicators=[...])
+   # Register the model and its training function with Bonklytics.
+   my_model = Bonklytics.model('my_model', train_fn, indicators=[...])
 
    def exec_fn(ctx):
       preds = ctx.preds('my_model')
@@ -106,27 +111,27 @@ snippets:
 
 ## User Guide
 
-- [Getting Started with Data Sources](https://www.pybroker.com/en/latest/notebooks/1.%20Getting%20Started%20with%20Data%20Sources.html)
-- [Backtesting a Strategy](https://www.pybroker.com/en/latest/notebooks/2.%20Backtesting%20a%20Strategy.html)
-- [Evaluating with Bootstrap Metrics](https://www.pybroker.com/en/latest/notebooks/3.%20Evaluating%20with%20Bootstrap%20Metrics.html)
-- [Ranking and Position Sizing](https://www.pybroker.com/en/latest/notebooks/4.%20Ranking%20and%20Position%20Sizing.html)
-- [Writing Indicators](https://www.pybroker.com/en/latest/notebooks/5.%20Writing%20Indicators.html)
-- [Training a Model](https://www.pybroker.com/en/latest/notebooks/6.%20Training%20a%20Model.html)
-- [Creating a Custom Data Source](https://www.pybroker.com/en/latest/notebooks/7.%20Creating%20a%20Custom%20Data%20Source.html)
-- [Applying Stops](https://www.pybroker.com/en/latest/notebooks/8.%20Applying%20Stops.html)
-- [Rebalancing Positions](https://www.pybroker.com/en/latest/notebooks/9.%20Rebalancing%20Positions.html)
-- [Rotational Trading](https://www.pybroker.com/en/latest/notebooks/10.%20Rotational%20Trading.html)
-- [FAQs](https://www.pybroker.com/en/latest/notebooks/FAQs.html)
+- [Getting Started with Data Sources](https://www.Bonklytics.com/en/latest/notebooks/1.%20Getting%20Started%20with%20Data%20Sources.html)
+- [Backtesting a Strategy](https://www.Bonklytics.com/en/latest/notebooks/2.%20Backtesting%20a%20Strategy.html)
+- [Evaluating with Bootstrap Metrics](https://www.Bonklytics.com/en/latest/notebooks/3.%20Evaluating%20with%20Bootstrap%20Metrics.html)
+- [Ranking and Position Sizing](https://www.Bonklytics.com/en/latest/notebooks/4.%20Ranking%20and%20Position%20Sizing.html)
+- [Writing Indicators](https://www.Bonklytics.com/en/latest/notebooks/5.%20Writing%20Indicators.html)
+- [Training a Model](https://www.Bonklytics.com/en/latest/notebooks/6.%20Training%20a%20Model.html)
+- [Creating a Custom Data Source](https://www.Bonklytics.com/en/latest/notebooks/7.%20Creating%20a%20Custom%20Data%20Source.html)
+- [Applying Stops](https://www.Bonklytics.com/en/latest/notebooks/8.%20Applying%20Stops.html)
+- [Rebalancing Positions](https://www.Bonklytics.com/en/latest/notebooks/9.%20Rebalancing%20Positions.html)
+- [Rotational Trading](https://www.Bonklytics.com/en/latest/notebooks/10.%20Rotational%20Trading.html)
+- [FAQs](https://www.Bonklytics.com/en/latest/notebooks/FAQs.html)
 
 ## Online Documentation
 
-[The full reference documentation is hosted at **www.pybroker.com**.](https://www.pybroker.com)
+[The full reference documentation is hosted at **www.Bonklytics.com**.](https://www.Bonklytics.com)
 
-(For Chinese users: [中文文档](https://www.pybroker.com/zh_CN/latest/), courtesy of [Albert King](https://github.com/albertandking).)
+(For Chinese users: [中文文档](https://www.Bonklytics.com/zh_CN/latest/), courtesy of [Albert King](https://github.com/albertandking).)
 
 ## Contact
 
-<img src="https://github.com/edtechre/pybroker/blob/master/docs/_static/email-image.png?raw=true">
+<img src="https://github.com/edtechre/Bonklytics/blob/master/docs/_static/email-image.png?raw=true">
 
 ## AI-Powered Stock News
 
